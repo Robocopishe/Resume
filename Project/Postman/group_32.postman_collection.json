@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "0340bbbe-fdcb-4ecc-bdf7-f5629e1a6508",
+		"name": "group_32",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23701486"
+	},
+	"item": [
+		{
+			"name": "get/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Ip_port}}",
+					"host": [
+						"{{Ip_port}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get_method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Ip_port}}/get_method?name=Nikita&age=35",
+					"host": [
+						"{{Ip_port}}"
+					],
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "68",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Ip_port}}/user_info_1?",
+					"host": [
+						"{{Ip_port}}"
+					],
+					"path": [
+						"user_info_1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
