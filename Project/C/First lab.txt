@@ -1,0 +1,22 @@
+Задачи по Для тренировки
+1 ) 
+#include <stdio.h>
+ void comparison ();
+
+int main() {
+    comparison ();
+    return 0;
+}
+ void comparison (){
+    float a,b;
+    printf("Input first number\t");
+    scanf("%f",&a);
+    printf("Input second number\t");
+    scanf("%f",&b);
+    if (a>b){
+        printf("a is %.2f",a);
+    } else {
+        printf("a is %.2f b is %.2f",a,b);
+    }
+
+ }
