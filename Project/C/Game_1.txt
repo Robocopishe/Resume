@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <conio.h>
+
+
+   int main() {
+
+    char wall [10][21];
+    int i;
+    int x =10,y=5;
+    char key;
+    int ox,oy;
+    int ax = 5 , ay = 6;
+    int timer = 0;
+
+    srand(time(NULL));
+
+    do{
+    //1) Создание локации
+
+    //Создаем потолок
+    sprintf(wall[0],"####################");
+    
+        for (i=1;i<=9;i++)
+            sprintf(wall[i],"#                  #");
+
+    //Создаем пол
+    sprintf(wall[9],"####################");
+
+    //2) Создание собаки
+
+    wall[y][x] = '@';
+    wall[ay][ax] = '*';
+
+
+
+    system("cls");
+
+    //вывод самой локации
+        for (int i = 0 ; i <=10 ;i++)
+         printf("%s\n",wall[i]);
+         printf("Timer is %d :\n",timer);
+
+
+    key = getch();
+
+    ox = x;
+    oy = y;
+
+
+    if ( key == 'w') y--;
+    if ( key == 's') y++;
+    if ( key == 'd') x++;
+    if ( key == 'a') x--;
+    if ( wall[y][x] == '#'){
+        x = ox;
+        y = oy;
+    }
+    if ( (x == ax) && (y == ay) ){
+
+           ax = rand() * 1.0/RAND_MAX * 18 +1;
+           ay = rand() * 1.0/RAND_MAX * 8 +1;
+           wall[y][x];
+           timer++;
+
+    }
+
+    }
+    while( key != 'e');
+    {
+         system("cls");
+
+    };
+
+   }
+
